@@ -23,9 +23,9 @@ SceneBuilder - приложение для упрощения создания �
 [Диаграмма классов](https://github.com/AnnTumanina/DailyPlanner/wiki/%235-%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0-%D0%9A%D0%BB%D0%B0%D1%81%D1%81%D0%BE%D0%B2).  
 [Диаграмма компонентов](https://github.com/AnnTumanina/DailyPlanner/wiki/%236-%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0-%D0%9A%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%BE%D0%B2).  
 [Диаграмма последовательности действий](https://github.com/AnnTumanina/DailyPlanner/wiki/%237-%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0-%D0%9F%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%94%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D0%B9).  
-[Диаграмма кооперации](https://github.com/AnnTumanina/DailyPlanner/wiki/%238-%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0-%D0%BA%D0%BE%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8)
-[Руководство пользователя](https://github.com/AnnTumanina/DailyPlanner/wiki/%239a-(10)-%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F).  
-[Тест кейсы](https://github.com/AnnTumanina/DailyPlanner/wiki/%239-%D0%A2%D0%B5%D1%81%D1%82-%D0%BA%D0%B5%D0%B9%D1%81%D1%8B).  
-[Тестовый граф](https://github.com/AnnTumanina/DailyPlanner/wiki/%238-%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B3%D1%80%D0%B0%D1%84%D1%8B).  
+[Диаграмма кооперации](https://github.com/AnnTumanina/DailyPlanner/wiki/%238-%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0-%D0%BA%D0%BE%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8)  
+[Руководство пользователя](https://github.com/AnnTumanina/DailyPlanner/wiki/%239%D0%B1(11)-%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F).  
+[Тест кейсы](https://github.com/AnnTumanina/DailyPlanner/wiki/%239%D0%B0(10)-%D0%A2%D0%B5%D1%81%D1%82-%D0%BA%D0%B5%D0%B9%D1%81%D1%8B).  
+[Тестовый граф](https://github.com/AnnTumanina/DailyPlanner/wiki/%239-%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B3%D1%80%D0%B0%D1%84%D1%8B).  
 # **Использованные источники**  
 [Создание форм](https://learn.microsoft.com/ru-ru/visualstudio/ide/create-csharp-winform-visual-studio?sa=X&ved=2ahUKEwjWg5vbyrroAhVXAJ0JHckQBzYQ9QF6BAgEEAI&view=vs-2022).
