@@ -9,10 +9,14 @@ namespace DailyPlanner
     public partial class StatisticsForm : Form
     {
         private SQLiteConnection connection;
+        private static string logFile = "log.txt";
 
         public StatisticsForm()
         {
             InitializeComponent();
+
+            Log("Пользователь открыл окно статистики");
+
 
             // Инициализация подключения к базе данных
             connection = new SQLiteConnection("Data Source=daily_planner.db;Version=3;");
@@ -26,6 +30,12 @@ namespace DailyPlanner
         {
             // Закрытие подключения к базе данных при закрытии формы
             connection.Close();
+        }
+
+        static void Log(string message)
+        {
+            string logmessage = $"{DateTime.Now} - {message}{Environment.NewLine}";
+            File.AppendAllText(logFile, logmessage);
         }
 
         private void CreateStatisticsChart()

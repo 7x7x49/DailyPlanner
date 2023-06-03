@@ -45,7 +45,7 @@
             // AddTaskButton
             // 
             AddTaskButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            AddTaskButton.Location = new Point(102, 509);
+            AddTaskButton.Location = new Point(59, 501);
             AddTaskButton.Margin = new Padding(3, 4, 3, 4);
             AddTaskButton.Name = "AddTaskButton";
             AddTaskButton.Size = new Size(151, 45);
@@ -57,7 +57,7 @@
             // ClearButton
             // 
             ClearButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ClearButton.Location = new Point(259, 509);
+            ClearButton.Location = new Point(216, 501);
             ClearButton.Margin = new Padding(3, 4, 3, 4);
             ClearButton.Name = "ClearButton";
             ClearButton.Size = new Size(141, 45);
@@ -69,7 +69,7 @@
             // statisticsButton
             // 
             statisticsButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            statisticsButton.Location = new Point(407, 509);
+            statisticsButton.Location = new Point(364, 501);
             statisticsButton.Margin = new Padding(3, 4, 3, 4);
             statisticsButton.Name = "statisticsButton";
             statisticsButton.Size = new Size(155, 45);
@@ -90,25 +90,25 @@
             TaskListBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TaskListBox.FormattingEnabled = true;
             TaskListBox.ItemHeight = 28;
-            TaskListBox.Location = new Point(102, 145);
+            TaskListBox.Location = new Point(59, 139);
             TaskListBox.Margin = new Padding(3, 4, 3, 4);
             TaskListBox.Name = "TaskListBox";
-            TaskListBox.Size = new Size(390, 284);
+            TaskListBox.Size = new Size(516, 284);
             TaskListBox.TabIndex = 6;
             // 
             // TaskTextBox
             // 
             TaskTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TaskTextBox.Location = new Point(102, 463);
+            TaskTextBox.Location = new Point(59, 455);
             TaskTextBox.Margin = new Padding(3, 4, 3, 4);
             TaskTextBox.Name = "TaskTextBox";
             TaskTextBox.PlaceholderText = "Введите название";
-            TaskTextBox.Size = new Size(298, 34);
+            TaskTextBox.Size = new Size(460, 34);
             TaskTextBox.TabIndex = 7;
             // 
             // TaskCalendar
             // 
-            TaskCalendar.Location = new Point(519, 215);
+            TaskCalendar.Location = new Point(613, 216);
             TaskCalendar.Margin = new Padding(10, 12, 10, 12);
             TaskCalendar.Name = "TaskCalendar";
             TaskCalendar.TabIndex = 8;
@@ -118,7 +118,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.White;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(102, 72);
+            label1.Location = new Point(59, 68);
             label1.Name = "label1";
             label1.Size = new Size(186, 32);
             label1.TabIndex = 9;
