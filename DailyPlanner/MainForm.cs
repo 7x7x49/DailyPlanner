@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Data.SQLite;
 using System.Windows.Forms;
 
@@ -8,10 +9,14 @@ namespace DailyPlanner
     {
         private SQLiteConnection connection;
         private SQLiteCommand command;
+        private static string logFile = "log.txt";
 
         public MainForm()
         {
             InitializeComponent();
+            InitializeLogger();
+
+            Log("Приложение запущено");
 
             // Инициализация подключения к базе данных
             connection = new SQLiteConnection("Data Source=daily_planner.db;Version=3;");
@@ -29,6 +34,20 @@ namespace DailyPlanner
         {
             // Закрытие подключения к базе данных при закрытии формы
             connection.Close();
+        }
+
+        //Логгирование
+        static void InitializeLogger()
+        {
+            if (!File.Exists(logFile))
+            {
+                File.Create(logFile).Close();
+            }
+        }
+        static void Log(string message)
+        {
+            string logmessage = $"{DateTime.Now} - {message}{Environment.NewLine}";
+            File.AppendAllText(logFile, logmessage);
         }
 
         private void AddTaskButton_Click(object sender, EventArgs e)
@@ -50,6 +69,8 @@ namespace DailyPlanner
 
                 // Загрузка обновленного списка задач
                 LoadTasks();
+
+                Log("Пользователь добавил план");
             }
         }
 
@@ -86,10 +107,12 @@ namespace DailyPlanner
             {
                 StatisticsForm statisticsForm = new StatisticsForm();
                 statisticsForm.Show();
+                Log("Пользователь открыл окно статистики");
             }
             else
             {
                 MessageBox.Show("Планы не найдены.\nВведите планы.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                Log("Пользователь пытался открыть окно статистики без внесения планов");
             }
         }
     }
