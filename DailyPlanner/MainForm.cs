@@ -2,6 +2,7 @@
 using System.IO;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DailyPlanner
 {
@@ -23,7 +24,7 @@ namespace DailyPlanner
             connection.Open();
 
             // Создание таблицы, если она не существует
-            command = new SQLiteCommand("CREATE TABLE IF NOT EXISTS Tasks (TaskText TEXT, TaskDate TEXT)", connection);
+            command = new SQLiteCommand("CREATE TABLE IF NOT EXISTS Tasks (TaskNotes TEXT, TaskText TEXT, TaskDate TEXT)", connection);
             command.ExecuteNonQuery();
 
             // Загрузка записей из базы данных
@@ -54,13 +55,15 @@ namespace DailyPlanner
         {
             string taskText = TaskTextBox.Text.Trim();
             string taskDate = TaskCalendar.SelectionStart.ToShortDateString();
+            string taskNotes = "";
 
             if (!string.IsNullOrEmpty(taskText))
             {
                 // Добавление задачи в базу данных
-                command = new SQLiteCommand("INSERT INTO Tasks (TaskText, TaskDate) VALUES (@taskText, @taskDate)", connection);
+                command = new SQLiteCommand("INSERT INTO Tasks (TaskNotes, TaskText, TaskDate) VALUES ( @taskNotes, @taskText, @taskDate)", connection);
                 command.Parameters.AddWithValue("@taskText", taskText);
                 command.Parameters.AddWithValue("@taskDate", taskDate);
+                command.Parameters.AddWithValue("@taskNotes", taskNotes);
                 command.ExecuteNonQuery();
 
                 // Очистка полей ввода после добавления задачи
@@ -103,17 +106,44 @@ namespace DailyPlanner
 
         private void StatisticsButton_Click(object sender, EventArgs e)
         {
-            if (TaskListBox.Items.Count != 0)
+
+            if (Application.OpenForms.OfType<StatisticsForm>().Count() == 0)
             {
-                StatisticsForm statisticsForm = new StatisticsForm();
-                statisticsForm.Show();
-                Log("Пользователь открыл окно статистики");
+                if (TaskListBox.Items.Count != 0)
+                {
+                    StatisticsForm statisticsForm = new StatisticsForm();
+                    statisticsForm.Show();
+                    Log("Пользователь открыл окно статистики");
+                }
+                else
+                {
+                    MessageBox.Show("Планы не найдены.\nВведите планы.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                    Log("Пользователь пытался открыть окно статистики без внесения планов");
+                }
             }
             else
             {
-                MessageBox.Show("Планы не найдены.\nВведите планы.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                Log("Пользователь пытался открыть окно статистики без внесения планов");
+                MessageBox.Show("У вас уже открыто окно статистики:)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                Log("Пользователь пытался открыть 2 окна статистики без одновременно");
             }
+
+        }
+        private void NotesButton_Click(object sender, EventArgs e)
+        {
+            string taskDate = TaskCalendar.SelectionStart.ToShortDateString();
+
+            if (Application.OpenForms.OfType<NotesForm>().Count() == 0)
+            {
+                NotesForm notesForm = new NotesForm(taskDate);
+                notesForm.Show();
+                Log("Пользователь открыл записки");
+            }
+            else
+            {
+                MessageBox.Show("У вас уже открыто окно записок:D", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                Log("Пользователь пытался открыть 2 окна записок без одновременно");
+            }
+
         }
     }
 }

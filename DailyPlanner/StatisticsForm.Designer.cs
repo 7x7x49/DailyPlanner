@@ -35,10 +35,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(401, 72);
+            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.DodgerBlue;
+            label1.Location = new Point(368, 64);
             label1.Name = "label1";
-            label1.Size = new Size(134, 32);
+            label1.Size = new Size(190, 46);
             label1.TabIndex = 0;
             label1.Text = "Статистика";
             // 
@@ -46,7 +47,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = Color.FromArgb(0, 18, 39);
             ClientSize = new Size(914, 600);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
